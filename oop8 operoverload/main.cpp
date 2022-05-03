@@ -3,5 +3,10 @@
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    Student NewStudent;
+
+    cout << "Enter student's surname, name, patronymic and grade: " << endl;
+    cin >> NewStudent;
+
+    cout << NewStudent;
 }
