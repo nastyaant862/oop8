@@ -16,3 +16,10 @@ istream& operator>> (istream& in, Student& stud)
     in >> stud.kurs;
     return in;
 }
+
+/*
+void Student::PrintMassive(int i) {
+    cout << "Student: " << this->mass[i].surname << ", " << this->mass[i].name << ", " << this->mass[i].patronymic << ", the " << this->mass[i].kurs << " grade." << endl;
+
+}
+*/
