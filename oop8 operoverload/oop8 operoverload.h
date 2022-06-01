@@ -4,50 +4,33 @@
 using namespace std;
 
 class Student {
-
 private:
-	Student* mass;
 	string value;
-	string name, surname, patronymic, kurs;
+	string name, surname, patronymic;
+	int kurs;
 
 public:
 	Student() {
 		name = "";
 		surname = "";
 		patronymic = "";
-		kurs = "";
+		kurs = 0;
 	}
-
-	Student(int N) {
-		mass = new Student[N];
-	}
-
-	void setValueMass(int ind, Student value) {
-		mass[ind] = value;
-	}
-
-	Student getValueMass(int ind) { 
-		return mass[ind]; 
-	}
-
-	//void PrintMassive(int i);
 
 	Student& operator=(const Student& right) {
 		if (this == &right) {
 			return *this;
 		}
 		value = right.value;
+		name = right.name;
+		surname = right.surname;
+		patronymic = right.patronymic;
+		kurs = right.kurs;
 		return *this;
 	}
 
 	friend ostream& operator<< (ostream &out, const Student &stud);
 	friend istream& operator>> (istream &in, Student &stud);
-
-	~Student() {
-		delete[]mass;
-	}
 };
-
-
 
 #endif
